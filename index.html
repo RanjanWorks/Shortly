@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shortly</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Shortly</h1>
+      <nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+      </nav>
+    </header>
+
+    <section class="hero-segment">
+      <div class="about">
+        <div class="landing-text">More than just shorter links</div>
+        <div class="landing-description">
+          Build your brand's recognition and get detailed insights on how your
+          links are performing
+        </div>
+        <button class="landing-button">Get Started</button>
+      </div>
+      <div class="shortner-container">
+        <form class="form-grp">
+          <input type="url" name="url" id="inputUrl" placeholder="Enter Long Url" required/>
+          <input type="text" id="slug" placeholder="Slug">
+          <button type="submit" id="shortBtn">Shorten It</button>
+        </form>
+      </div>
+    </section>
+    <section class="fetures-segment">
+      <div class="links-container">
+        <div class="links-wrapper">
+          <div class="original-link">https://yourweb.com</div>
+          <a href="#" class="shorten-link">https://shortly/eldfd</a>
+          <button onclick="copyLink(this)" class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="fetures-about">
+        <div class="heading-text">Advanced Statistics</div>
+        <p class="feture-description">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <div class="feture-card-container">
+        <div class="card">
+          <div class="icon">
+            <i class="material-symbols-outlined">receipt_long</i>
+          </div>
+          <div class="card-heading">Detailed Records</div>
+          <p class="card-text">
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="material-symbols-outlined">tune</i>
+          </div>
+          <div class="card-heading">Fully Customizable</div>
+          <p class="card-text">
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="material-symbols-outlined">monitoring</i>
+          </div>
+          <div class="card-heading">Brand Recognition</div>
+          <p class="card-text">
+            Boost your brand recognition with each click. Generic links don't
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-before">
+      <div class="big-text">Boost your links today</div>
+      <button>Get Started</button>
+    </section>
+
+    <footer>
+      <div class="footer-heading">
+        <h1>Shortly</h1>
+      </div>
+      <div class="footer-features content">
+        <li class="footer-txt">Features</li>
+        <li class="first"><a href="#">Link Shorting</a></li>
+        <li><a href="#">Custom Slug</a></li>
+        <li><a href="#">Free</a></li>
+      </div>
+      <div class="footer-resources content">
+        <li class="footer-txt">Resources</li>
+        <li class="first"><a href="#">BLog</a></li>
+        <li><a href="#">Developer</a></li>
+        <li><a href="#">Support</a></li>
+      </div>
+      <div class="footer-company content">
+        <li class="footer-txt">Company</li>
+        <li class="first"><a href="#">About</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Contact</a></li>
+      </div>
+      <div class="social-links">
+        <li class="hint--top hint--rounded" aria-label="Facebook" id="facebook">
+          <a target="_blank" href="https://www.facebook.com/ishere.ranjan"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+        </li>
+        <li aria-label="Instagram" id="instagram">
+          <a target="_blank" href="https://www.instagram.com/ishere_ranjan"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </li>
+
+        <li aria-label="mail" id="twitter">
+          <a target="_blank" href="mailto:kashyapranjan9977@gmail.com"
+            ><i class="bx bx-envelope"></i
+          ></a>
+        </li>
+        <li aria-label="Linkedin" id="linkedin">
+          <a target="_blank" href="https://www.linkedin.com/in/ishere-ranjan"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+        </li>
+
+        <li aria-label="Github" id="github">
+          <a target="_blank" href="https://github.com/RanjanWorks"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </li>
+        <li aria-label="buymeacoffe" id="github">
+          <a target="_blank" href="https://buymeacoffee.com/ranjankashyap"
+            ><i class="bx bx-coffee"></i
+          ></a>
+        </li>
+      </div>
+    </footer>
+    <svg style="display: none">
+        <symbol id="icon.spinner">
+          <g>
+            <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><animate attributeName="stroke-dasharray" dur="1.5s" calcMode="spline" values="0 150;42 150;42 150;42 150" keyTimes="0;0.475;0.95;1" keySplines="0.42,0,0.58,1;0.42,0,0.58,1;0.42,0,0.58,1" repeatCount="indefinite"/><animate attributeName="stroke-dashoffset" dur="1.5s" calcMode="spline" values="0;-16;-59;-59" keyTimes="0;0.475;0.95;1" keySplines="0.42,0,0.58,1;0.42,0,0.58,1;0.42,0,0.58,1" repeatCount="indefinite"/></circle><animateTransform attributeName="transform" type="rotate" dur="2s" values="0 12 12;360 12 12" repeatCount="indefinite"/>
+          </g>
+        </symbol>
+      </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
