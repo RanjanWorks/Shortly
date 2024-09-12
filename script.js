@@ -18,17 +18,20 @@ form.addEventListener("submit", (e) => {
 });
 
 function displayLinks() {
-  document.querySelectorAll(".links-wrapper").forEach((li) => li.remove());
-  let reversedLinks = [...Links].reverse();
-  reversedLinks.forEach((item, id) => {
-    let newLink = `<div class="links-wrapper">
+  document.startViewTransition(() => {
+    document.querySelectorAll(".links-wrapper").forEach((li) => li.remove());
+    let reversedLinks = [...Links].reverse();
+    reversedLinks.forEach((item, id) => {
+      let newLink = `<div class="links-wrapper">
           <div class="original-link">${item.long}</div>
           <a href="${item.link}" class="shorten-link">${item.link}</a>
           <button onclick="copyLink(this,'${item.link}')" class="copy-btn">Copy</button>
         </div>`;
-    linkContainer.insertAdjacentHTML("beforeend", newLink);
+      linkContainer.insertAdjacentHTML("beforeend", newLink);
+    });
   });
 }
+
 displayLinks();
 function addLinks(link, long) {
   let newLink = { link, long };
@@ -59,10 +62,10 @@ function FetchData() {
         let url = "https://1pt.co/" + data.short;
         addLinks(url, mainUrl);
         inputUrl.value = "";
+        slug.value = ""
         shortBtn.innerHTML = "Shorten It";
-        slug.textContent = "";
       } else {
-        confirm("This Url is taken try diffrent one");
+        alert("Something went wrong ):");
       }
     });
 }
